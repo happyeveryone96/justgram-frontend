@@ -3,6 +3,8 @@ const writeBtn = document.getElementById('write-btn');
 const commentContainer = document.getElementsByClassName('feeds-comments')[0];
 const feeds = document.getElementsByClassName('feeds')[0];
 const heartDiv = document.getElementById('feed-heart');
+const user = document.getElementById('user');
+const myMenu = document.getElementById('my-menu');
 
 let h = 750;
 writeBtn.disabled = true;
@@ -82,15 +84,31 @@ const enterkey = () => {
 
 const changeColor = () => {
   const heartIcon = heartDiv.getElementsByClassName('fa-heart')[0]
-  if (heartIcon.style.color === 'gray') {
+  if (heartIcon.style.color !== 'red') {
     heartIcon.style.color = 'red';
-  } else {
+  } else if (heartIcon.style.color !== 'gray') {
     heartIcon.style.color = 'gray';
   }
 }
 
+const toggleMyMenu = (e) => {
+  console.log(e.target.id)
+  if (myMenu.style.display !== 'block') {
+    myMenu.style.display = 'block';
+  } else if (myMenu.style.display !== 'none' && !e.target.closest('#my-menu')) {
+    myMenu.style.display = 'none';
+  }
+}
+
+const hideMyMenu = (e) => {
+  if (myMenu.style.display !== 'none' && !e.target.closest('#user')) {
+    myMenu.style.display = 'none';
+  }
+}
 
 comment.addEventListener('keydown', activateBtn);
 comment.addEventListener('keydown', enterkey);
 writeBtn.addEventListener('click', postComment);
 heartDiv.addEventListener('click', changeColor);
+user.addEventListener('click', toggleMyMenu);
+document.addEventListener('click', hideMyMenu);
