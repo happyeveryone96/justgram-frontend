@@ -12,7 +12,9 @@
   height: 55px;
 }
 
-.nav-left, .nav-center, .nav-right {
+.nav-left,
+.nav-center,
+.nav-right {
   display: flex;
 }
 
@@ -50,7 +52,7 @@
 }
 
 #my-menu ul {
-  list-style:none;
+  list-style: none;
   font-size: 20px;
   padding: 10px;
 }
@@ -99,7 +101,7 @@
   text-align: center;
   outline: none;
   width: 200px;
-  background-color: rgb(249,249,249);
+  background-color: rgb(249, 249, 249);
   border: 1px solid lightgray;
 }
 
@@ -175,7 +177,7 @@ img {
 
 main {
   display: flex;
-  background-color: rgb(249,249,249);
+  background-color: rgb(249, 249, 249);
   width: 100vw;
   height: 100vh;
   min-width: 600px;
@@ -195,7 +197,8 @@ main {
   margin: 20px;
 }
 
-.feeds-top-left, .feeds-top-right {
+.feeds-top-left,
+.feeds-top-right {
   display: flex;
   align-items: center;
 }
@@ -222,7 +225,7 @@ main {
   align-items: center;
 }
 
-.feeds-icons-left > div {
+.feeds-icons-left>div {
   padding: 0 5px;
 }
 
@@ -257,8 +260,10 @@ main {
   cursor: pointer;
 }
 
-.time, .others, .ad-desc, 
-.story-text, 
+.time,
+.others,
+.ad-desc,
+.story-text,
 .suggestion-text {
   color: gray;
 }
@@ -283,25 +288,25 @@ main {
 
 .write-comment {
   display: flex;
-  background-color: rgb(249,249,249);
+  background-color: rgb(249, 249, 249);
   border-top: 1px solid lightgray;
   padding: 20px 0;
-  margin: 10px 0; 
+  margin: 10px 0;
   z-index: -1;
 }
 
 
-.write-comment > input{
+.write-comment>input {
   width: 70%;
   outline: none;
   border: none;
-  background-color: rgb(249,249,249);
+  background-color: rgb(249, 249, 249);
   padding: 0 0 0 10px;
 }
 
-.write-comment > button{
+.write-comment>button {
   width: 100px;
-  background-color: rgb(249,249,249);
+  background-color: rgb(249, 249, 249);
   border: none;
   color: lightblue;
   margin: 0 0 0 200px;
@@ -365,7 +370,7 @@ main {
   background-color: transparent;
   border: 0;
   cursor: pointer;
-  color: rgb(114,176,233);
+  color: rgb(114, 176, 233);
   margin: 0 0 0 100px;
 }
 
@@ -378,6 +383,6 @@ main {
 
 @media screen and (max-width: 900px) {
   .main-right {
-      display: none;
+    display: none;
   }
 }
