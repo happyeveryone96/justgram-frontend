@@ -23,7 +23,6 @@ const userArr = [
   }
 ];
 
-let h = 750;
 writeBtn.disabled = true;
 
 const activateBtn = () => {
@@ -68,9 +67,6 @@ const postComment = () => {
   writeBtn.style.cursor = 'auto';
   writeBtn.style.color = 'lightblue';
 
-  h += 24.5;
-  feeds.style.height = `${h}px`;
-
   div2.addEventListener('click', () => {
     const commentHeart = div2.getElementsByClassName('fa-heart')[0];
     if (commentHeart.style.color !== 'red') {
@@ -82,8 +78,6 @@ const postComment = () => {
 
   btn.addEventListener('click', () => {
     container.removeChild(div);
-    h -= 24.5;
-    feeds.style.height = `${h}px`;
   })
 }
 

@@ -176,18 +176,18 @@ img {
 }
 
 main {
-  display: flex;
   background-color: rgb(249, 249, 249);
   width: 100vw;
   height: 100vh;
   min-width: 600px;
   padding: 30px;
-  justify-content: center;
 }
 
 .feeds {
+  position: relative;
+  right: 100px;
+  margin: 0 auto;
   width: 500px;
-  height: 750px;
   border: 1px solid lightgray;
 }
 
@@ -296,7 +296,7 @@ main {
 }
 
 
-.write-comment>input {
+.write-comment > input {
   width: 70%;
   outline: none;
   border: none;
@@ -304,12 +304,21 @@ main {
   padding: 0 0 0 10px;
 }
 
-.write-comment>button {
+.write-comment > button {
   width: 100px;
   background-color: rgb(249, 249, 249);
   border: none;
   color: lightblue;
   margin: 0 0 0 200px;
+}
+
+.main-right {
+  position: relative;
+  margin: 0 auto;
+  bottom: 750px;
+  left: 400px;
+  background-color: rgb(249,249,249);
+  width: 400px;
 }
 
 .ad {
@@ -384,5 +393,10 @@ main {
 @media screen and (max-width: 900px) {
   .main-right {
     display: none;
+  }
+  .feeds {
+    position: relative;
+    right: 0;
+    margin: 0 auto;
   }
 }
